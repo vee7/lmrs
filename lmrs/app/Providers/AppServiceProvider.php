@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Elasticsearch\ClientBuilder as ESClientBuilder;
+use App\pool\Core\CoRedis;
+use App\pool\Redis\RedisPool;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -20,6 +22,10 @@ class AppServiceProvider extends ServiceProvider
                 $builder->setLogger(app('log')->driver());
             }
             return $builder->build();
+        });
+
+        $this->app->singleton('redis',function (){
+            return new CoRedis(new RedisPool($this->app));
         });
     }
 

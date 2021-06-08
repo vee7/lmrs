@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Model\Product;
 use Illuminate\Support\Facades\Redis;
+use App\Jobs\TestJob as JobsQueue;
+use Illuminate\Support\Facades\Log;
 
 class IndexController extends Controller
 {
@@ -39,5 +41,19 @@ class IndexController extends Controller
         "data" => $ProductSoldCountData,
         "status" => 200
       ]);
+    }
+
+    //测试rabbitmq队列
+    public function queue(){
+      for ($i=0; $i < 5; $i++) {
+        Log::info('Start: ' . date('Y-m-d H:i:s', time()));
+        $arr = ['time' => time(), 'id' => rand(100, 999)];
+
+        //$this->dispatch(new JobsQueue($arr));
+        JobsQueue::dispatch($arr);
+        Log::info('End: ' . date('Y-m-d H:i:s', time()));
+      }
+
+      return 'success';
     }
 }

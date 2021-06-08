@@ -11,21 +11,51 @@ class User extends Authenticatable implements JWTSubject
 {
     use Notifiable;
 
-    protected $table = "user";
+    public $table = "user";
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
     protected $fillable = [
-        'name','password','email','phone','mobile','create_time'
+        'name', 'email', 'password','mobile','status','create_time','addr_id'
     ];
+
+    /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'password', 'remember_token',
+    ];
+
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+//        'email_verified_at' => 'datetime',
+    ];
+
+    /**
+     * @var bool
+     * author:六星教育-星空老师
+     * 模型时间戳
+     */
     public $timestamps = false;
 
-    //提供做jwt验证所必需的方法
     public function getJWTIdentifier()
     {
-    return $this->getKey();
+        // TODO: Implement getJWTIdentifier() method.
+        return $this->getKey();
     }
 
     public function getJWTCustomClaims()
     {
-    return [];
+        // TODO: Implement getJWTCustomClaims() method.
+        return [];
     }
-
 }

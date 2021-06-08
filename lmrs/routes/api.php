@@ -46,4 +46,7 @@ $api->version('v1',["middleware" => ["bindings"],"namespace" => "App\Http\Contro
   $api->get('EsProductCategoryList','ProductController@EsProductCategoryList')->name("product.EsProductCategoryList");
   $api->get('CategoryAttributesList','ProductController@CategoryAttributesList')->name("product.CategoryAttributesList");
   $api->post('productInfo','ProductController@productInfo')->name("product.productInfo");
+  $api->get('queue','IndexController@queue');
+  $api->post("pool","ProductController@pool")->name("product.pool");
+  $api->post("order","OrdersController@store")->name("orders.add");
 });

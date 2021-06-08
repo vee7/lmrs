@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '45702dbacb11e213c51d8abdf4fb3c2877e594b8',
+    'reference' => 'f2dad341dff07d27c29e227356db04e9a2bf8bba',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -593,7 +593,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '45702dbacb11e213c51d8abdf4fb3c2877e594b8',
+      'reference' => 'f2dad341dff07d27c29e227356db04e9a2bf8bba',
     ),
     'laravel/tinker' => 
     array (
@@ -725,6 +725,24 @@
       ),
       'reference' => '06e2ebd25f2869e54a306dda991f7db58066f7f6',
     ),
+    'paragonie/constant_time_encoding' => 
+    array (
+      'pretty_version' => 'v2.4.0',
+      'version' => '2.4.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'f34c2b11eb9d2c9318e13540a1dbc2a3afbd939c',
+    ),
+    'paragonie/random_compat' => 
+    array (
+      'pretty_version' => 'v9.99.100',
+      'version' => '9.99.100.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '996434e5492cb4c3edcb9168db6fbb1359ef965a',
+    ),
     'phar-io/manifest' => 
     array (
       'pretty_version' => '2.0.1',
@@ -742,6 +760,15 @@
       array (
       ),
       'reference' => 'bae7c545bef187884426f042434e561ab1ddb182',
+    ),
+    'php-amqplib/php-amqplib' => 
+    array (
+      'pretty_version' => 'v2.12.3',
+      'version' => '2.12.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'f746eb44df6d8f838173729867dd1d20b0265faa',
     ),
     'phpdocumentor/reflection-common' => 
     array (
@@ -778,6 +805,15 @@
       array (
       ),
       'reference' => '994ecccd8f3283ecf5ac33254543eb0ac946d525',
+    ),
+    'phpseclib/phpseclib' => 
+    array (
+      'pretty_version' => '3.0.8',
+      'version' => '3.0.8.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'd9615a6fb970d9933866ca8b4036ec3407b020b6',
     ),
     'phpspec/prophecy' => 
     array (
@@ -1422,6 +1458,22 @@
       array (
       ),
       'reference' => 'e588cb719539366c0e2f6017f975379cb73e9680',
+    ),
+    'videlalvaro/php-amqplib' => 
+    array (
+      'replaced' => 
+      array (
+        0 => 'v2.12.3',
+      ),
+    ),
+    'vladimir-yuldashev/laravel-queue-rabbitmq' => 
+    array (
+      'pretty_version' => 'v10.2.0',
+      'version' => '10.2.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '4f06d8e1c8ff6b6f49dd94f38baaf60679d7d704',
     ),
     'vlucas/phpdotenv' => 
     array (

@@ -19,7 +19,8 @@
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
         "predis/predis": "^1.1",
-        "tymon/jwt-auth": "^1.0"
+        "tymon/jwt-auth": "^1.0",
+        "vladimir-yuldashev/laravel-queue-rabbitmq": "10.2"
     },
     "require-dev": {
         "doctrine/dbal": " ~2.3",

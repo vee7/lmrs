@@ -132,6 +132,10 @@ return [
             'password' => env('REDIS_PASSWORD', null),
             'port' => env('REDIS_PORT', '6379'),
             'database' => env('REDIS_DB', '0'),
+            'pool' => [
+                'size' => 10
+            ],
+            'driver' => 'redis'
         ],
 
         'cache' => [
@@ -143,7 +147,6 @@ return [
         ],
 
     ],
-
     'elasticsearch' => [
         'hosts' => explode(',',env("ES_HOSTS"))
     ],

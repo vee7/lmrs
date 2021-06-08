@@ -204,16 +204,20 @@ class ProductController extends Controller
             }
 
 
-
-
-
-
-
         }else{
             return response()->json([
                 "status"=>430,
                 "msg"=>"未找到商品id"
             ]);
         }
+    }
+
+    public function pool()
+    {
+        //用连接池的方式操作Redis
+        $result = app('redis')->get("lmrs_home_index");
+        // $result = "123";
+
+        return response()->json($result);
     }
 }
