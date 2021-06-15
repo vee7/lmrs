@@ -10,6 +10,8 @@ use App\Services\ElasticsearchService;
 use Elasticsearch\ClientBuilder;
 use DB;
 use Illuminate\Support\Facades\Redis;
+use App\pool\Redis as RedisPool;
+use App\Jobs\UpdateProduct;
 
 class ProductController extends Controller
 {
@@ -212,12 +214,29 @@ class ProductController extends Controller
         }
     }
 
+    //测试redis连接池
     public function pool()
     {
         //用连接池的方式操作Redis
         $result = app('redis')->get("lmrs_home_index");
         // $result = "123";
-
+        // $result = RedisPool::get("lmrs_home_index");
         return response()->json($result);
+    }
+
+    //使用rabbitmq队列异步更新redis中的商品缓存
+    public function update(Request $request)
+    {
+        //修改mysql数据
+        $product = Product::find($request->input('id'));
+        $product->update([
+            'name' => $request->input('name')
+        ]);
+        //如果修改成功，则把商品对象发给队列
+        if($product){
+            $queue = new UpdateProduct(Product::find($request->input('id')));
+            return "更新成功.";
+        }
+        return "更新失败.";
     }
 }

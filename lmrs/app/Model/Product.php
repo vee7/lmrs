@@ -8,7 +8,14 @@ class Product extends Model
 {
     public $table = "products";
 
-    public $fillable = ["*"];
+    // public $fillable = ["*"];
+
+    public $guarded = [];
+
+    const TYPE_SECKILL = 0;
+    public static $typeMap = [
+        self::TYPE_SECKILL => '秒杀订单'
+    ];
 
     protected $casts = [
         'status' => "boolean"
@@ -39,5 +46,10 @@ class Product extends Model
     public function description()
     {
         return $this->hasOne(ProductDescription::class);
+    }
+
+    public function seckill()
+    {
+        return $this->hasOne(SeckillProduct::class);
     }
 }

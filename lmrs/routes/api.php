@@ -49,4 +49,6 @@ $api->version('v1',["middleware" => ["bindings"],"namespace" => "App\Http\Contro
   $api->get('queue','IndexController@queue');
   $api->post("pool","ProductController@pool")->name("product.pool");
   $api->post("order","OrdersController@store")->name("orders.add");
+  $api->post("update","ProductController@update")->name("product.update");
+  $api->post("seckill","OrdersController@seckill")->name("orders.seckill");
 });

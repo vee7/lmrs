@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'f2dad341dff07d27c29e227356db04e9a2bf8bba',
+    'reference' => 'ade60874967e29d782185e625ca6eab01827652a',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -231,6 +231,51 @@
       array (
       ),
       'reference' => '25522ef4f16adcf49d7a1db149f2fcf010655b7f',
+    ),
+    'enqueue/dsn' => 
+    array (
+      'pretty_version' => '0.10.8',
+      'version' => '0.10.8.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '729fabaae6b24189d14598033b174bd72e825e9a',
+    ),
+    'enqueue/enqueue' => 
+    array (
+      'pretty_version' => '0.10.9',
+      'version' => '0.10.9.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '4bc475f9ebd447951eecc45063a135c089f3f8a0',
+    ),
+    'enqueue/fs' => 
+    array (
+      'pretty_version' => '0.10.9',
+      'version' => '0.10.9.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'c0888c1fe119938b298420ab349960227db40927',
+    ),
+    'enqueue/laravel-queue' => 
+    array (
+      'pretty_version' => '0.10.4',
+      'version' => '0.10.4.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '02a3dd75f8926de447aa85c570e14681ec2b1bd1',
+    ),
+    'enqueue/null' => 
+    array (
+      'pretty_version' => '0.10.9',
+      'version' => '0.10.9.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '25614c0b058a8535766b018289a69f288dca97a8',
     ),
     'ezimuel/guzzlestreams' => 
     array (
@@ -593,7 +638,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'f2dad341dff07d27c29e227356db04e9a2bf8bba',
+      'reference' => 'ade60874967e29d782185e625ca6eab01827652a',
     ),
     'laravel/tinker' => 
     array (
@@ -648,6 +693,15 @@
       array (
       ),
       'reference' => '3b9dff8aaf7323590c1d2e443db701eb1f9aa0d3',
+    ),
+    'makasim/temp-file' => 
+    array (
+      'pretty_version' => '0.2.0',
+      'version' => '0.2.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'e9cfbfc61a23044aeb2fe0a3db49aeec2f84ca27',
     ),
     'mockery/mockery' => 
     array (
@@ -969,6 +1023,24 @@
       array (
       ),
       'reference' => 'e4573f47750dd6c92dca5aee543fa77513cbd8d3',
+    ),
+    'queue-interop/amqp-interop' => 
+    array (
+      'pretty_version' => '0.8.2',
+      'version' => '0.8.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'a893c72832784ca846fcc1bd86274a6a449a1ab7',
+    ),
+    'queue-interop/queue-interop' => 
+    array (
+      'pretty_version' => '0.8.1',
+      'version' => '0.8.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '117043fd38490f8b5516622cd4b697b33a89ce2b',
     ),
     'ralouphie/getallheaders' => 
     array (

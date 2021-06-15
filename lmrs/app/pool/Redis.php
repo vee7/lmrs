@@ -19,12 +19,19 @@ class Redis
     public static function __callStatic($name, $arguments)
     {
         Runtime::enableCoroutine();
-        $chan = new Channel(1);
-        Coroutine::create(function () use ($chan,$name,$arguments){
+        $chan = new Channel(3);
+        go(function () use ($chan,$name,$arguments){
+            global $result;
+            //$redis = app('redis');
             $redis = self::getDriver();
             $return = $redis->{$name}(...$arguments);
-            $chan->push($return);
-            return $chan->pop();
+            $chan->push("123");
+            // $chan->push($return);
+            $result = $chan->pop();
         });
+
+
+        // return $result;
+        return $result;
     }
 }

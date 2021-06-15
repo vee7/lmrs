@@ -33,6 +33,7 @@ class Order extends Model
         'ship_status',
         'ship_data',
         'extra',
+        'type',
     ];
 
     protected $casts = [
@@ -45,6 +46,11 @@ class Order extends Model
 
     protected $dates = [
         'paid_at',//支付时间
+    ];
+
+    const TYPE_SECKILL = 0;
+    public static $typeMap = [
+        self::TYPE_SECKILL => '秒杀订单'
     ];
 
     /**

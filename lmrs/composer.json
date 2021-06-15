@@ -12,6 +12,8 @@
         "barryvdh/laravel-ide-helper": "2.8",
         "dingo/api": "^3.0",
         "elasticsearch/elasticsearch": "7.12.X",
+        "enqueue/fs": "^0.10.9",
+        "enqueue/laravel-queue": "^0.10.4",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^1.0",
         "guzzlehttp/guzzle": "^6.3",
